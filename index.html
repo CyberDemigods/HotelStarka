@@ -12,6 +12,15 @@
         /* ======================================
            CSS VARIABLES - VINTAGE PALETTE
            ====================================== */
+        @font-face {
+            font-family: 'Old English Five';
+            src: url('fonts/OldEnglishFive.woff2') format('woff2'),
+                 url('fonts/OldEnglishFive.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --brown-dark: #3B1F0B;
             --brown: #623304;
@@ -76,14 +85,14 @@
         }
 
         .logo {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            font-weight: 600;
+            font-family: 'Old English Five', var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 400;
             color: var(--gold);
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-transform: none;
         }
-        .logo span { font-weight: 300; font-size: 0.75em; display: block; letter-spacing: 5px; color: var(--gold-light); opacity: 0.8; }
+        .logo span { display: none; }
 
         .nav-links { display: flex; gap: 32px; list-style: none; }
         .nav-links a {
@@ -787,7 +796,7 @@
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(201, 169, 110, 0.15);
         }
-        .footer-brand .logo { font-size: 1.3rem; margin-bottom: 12px; }
+        .footer-brand .logo { font-size: 1.5rem; margin-bottom: 12px; }
         .footer-desc {
             font-size: 0.85rem;
             color: var(--gold-light);
@@ -1242,8 +1251,7 @@
     <header class="site-header">
         <nav class="nav-inner">
             <a href="#home" class="logo" onclick="showSection('main')">
-                Starka
-                <span data-i18n="logo_subtitle">Hotel Butikowy</span>
+                Hotel Starka
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#o-hotelu" onclick="closeMenu()" data-i18n="nav_about">O hotelu</a></li>
@@ -2122,7 +2130,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo">Starka <span data-i18n="logo_subtitle">Hotel Butikowy</span></div>
+                    <div class="logo">Hotel Starka</div>
                     <p class="footer-desc" data-i18n="footer_desc">Butikowy hotel w ponad stuletniej kamienicy nad Odr&#261;. 20 niepowtarzalnych pokoi w centrum Opola.</p>
                 </div>
                 <div>
