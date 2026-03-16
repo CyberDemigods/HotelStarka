@@ -212,6 +212,47 @@
             margin: 0 auto 36px;
         }
 
+        /* Hero scroll hint */
+        .hero-scroll-hint {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .hero-scroll-hint:hover { opacity: 1; }
+
+        .hero-scroll-line {
+            display: block;
+            width: 1px;
+            height: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-scroll-line::before {
+            content: '';
+            position: absolute;
+            top: -48px;
+            left: 0;
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, transparent, var(--gold));
+            animation: scrollLine 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollLine {
+            0% { top: -48px; }
+            50% { top: 48px; }
+            50.01% { top: -48px; }
+            100% { top: -48px; }
+        }
+
         .btn {
             display: inline-block;
             padding: 14px 40px;
@@ -1288,6 +1329,9 @@
                 <p class="hero-desc" data-i18n="hero_desc">Zapraszamy do pi&#281;knego butikowego hotelu w ponad stuletniej kamienicy w centrum Opola, nad malowniczym rozwidleniem Odry.</p>
                 <a href="#rezerwacja" class="btn" data-i18n="hero_btn">Zarezerwuj pobyt</a>
             </div>
+            <a href="#o-hotelu" class="hero-scroll-hint" aria-label="Scroll down">
+                <span class="hero-scroll-line"></span>
+            </a>
         </section>
 
         <!-- O HOTELU -->
