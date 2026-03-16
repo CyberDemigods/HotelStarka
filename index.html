@@ -591,6 +591,49 @@
             filter: sepia(20%) saturate(80%);
         }
 
+        /* Parking navigation button */
+        .parking-nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 14px 20px;
+            background: var(--brown-dark);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .parking-nav-btn:hover {
+            background: var(--gold);
+            color: var(--brown-dark);
+        }
+
+        /* Parking link in reservation section */
+        .parking-nav-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: var(--gold);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .parking-nav-inline:hover {
+            opacity: 1;
+            color: var(--gold-light);
+        }
+
         /* ======================================
            POLITYKA PRYWATNOSCI
            ====================================== */
@@ -1535,6 +1578,10 @@
                             <div class="res-info-label" data-i18n="res_parking_label">Parking</div>
                             <div class="res-info-value" data-i18n="res_parking_value">Zamkni&#281;ty, monitorowany</div>
                             <div class="res-info-note" data-i18n="res_parking_note">35 z&#322; / dob&#281;</div>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=50.66850353746782,17.918459302692465&travelmode=driving"
+                               target="_blank" rel="noopener"
+                               class="parking-nav-inline"
+                               data-i18n="parking_nav_short">&#8594; Jak dojecha&#263; do parkingu?</a>
                         </div>
                         <div class="res-info-item">
                             <div class="res-info-label" data-i18n="res_pets_label">Zwierz&#281;ta</div>
@@ -1584,13 +1631,19 @@
                     <div>
                         <iframe
                             class="contact-map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.8!2d17.929!3d50.666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710530f3b5c6c67%3A0x9df8e09306e6e82!2sHotel%20Starka!5e0!3m2!1spl!2spl!4v1"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1267.4!2d17.9185!3d50.6685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47105302257df38b%3A0xcc5adea6f7149cab!2sHotel%20Starka!5e0!3m2!1spl!2spl!4v1"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                             data-i18n-title="map_title"
                             title="Mapa - Hotel Starka, Opole">
                         </iframe>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=50.66850353746782,17.918459302692465&travelmode=driving"
+                           target="_blank" rel="noopener"
+                           class="parking-nav-btn"
+                           data-i18n="parking_nav">
+                            &#9872; Nawiguj do parkingu hotelowego
+                        </a>
                     </div>
                 </div>
             </div>
