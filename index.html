@@ -566,13 +566,14 @@
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
         .form-notice {
-            font-size: 0.8rem;
-            color: var(--gold-light);
-            opacity: 0.7;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--gold);
             line-height: 1.6;
             margin-bottom: 20px;
             padding: 16px;
-            border: 1px solid rgba(201, 169, 110, 0.2);
+            border: 1px solid rgba(201, 169, 110, 0.5);
+            background: rgba(201, 169, 110, 0.08);
         }
 
         .form-checkbox {
@@ -1513,7 +1514,7 @@
                 <div class="pricing-notes">
                     <strong data-i18n="pricing_notes_title">Informacje dodatkowe:</strong><br>
                     &#8226; <span data-i18n="pricing_note_breakfast">Cena pokoju uwzgl&#281;dnia &#347;niadanie</span><br>
-                    &#8226; <span data-i18n="pricing_note_parking">Parking zamkni&#281;ty, monitorowany: 35 z&#322; / dob&#281; / samoch&#243;d</span><br>
+                    &#8226; <span data-i18n="pricing_note_parking">Parking zamkni&#281;ty: 35 z&#322; / dob&#281; / samoch&#243;d</span><br>
                     &#8226; <span data-i18n="pricing_note_extra_bed">Dostawka: 80 z&#322; / dob&#281;</span><br>
                     &#8226; <span data-i18n="pricing_note_pets">Zwierz&#281;ta: 40 z&#322; / dob&#281;</span><br>
                     &#8226; <span data-i18n="pricing_note_prices">Ceny mog&#261; si&#281; r&#243;&#380;ni&#263; w zale&#380;no&#347;ci od terminu rezerwacji</span>
@@ -1525,12 +1526,12 @@
         <section class="reservation" id="rezerwacja">
             <div class="container">
                 <p class="section-label" data-i18n="res_label">Rezerwacje</p>
-                <h2 class="section-title" data-i18n="res_title">Zarezerwuj pobyt</h2>
+                <h2 class="section-title" data-i18n="res_title">Formularz kontaktowy</h2>
                 <div class="section-divider"></div>
-                <p class="section-text" data-i18n="res_text">Formularz rezerwacyjny umo&#380;liwi nam dok&#322;adne zrozumienie Pa&#324;stwa preferencji i potrzeb, aby zapewni&#263; komfortowy i niezapomniany pobyt w naszym hotelu.</p>
+                <p class="section-text" data-i18n="res_text">Formularz kontaktowy umo&#380;liwi nam dok&#322;adne zrozumienie Pa&#324;stwa preferencji i potrzeb, aby zapewni&#263; komfortowy i niezapomniany pobyt w naszym hotelu.</p>
 
                 <div class="reservation-grid">
-                    <form id="reservationForm" onsubmit="handleReservation(event)">
+                    <form id="reservationForm" action="https://formspree.io/f/FORMSPREE_ENDPOINT" method="POST" onsubmit="handleReservation(event)">
                         <div class="form-notice" data-i18n="res_notice">
                             Przes&#322;anie formularza nie oznacza dokonania rezerwacji. Prosz&#281; oczekiwa&#263; na otrzymanie odpowiedzi e-mail z potwierdzeniem.
                         </div>
@@ -1586,7 +1587,7 @@
                             </p>
                         </div>
 
-                        <button type="submit" class="btn btn-filled" style="width: 100%;" data-i18n="res_submit">Z&#322;&#243;&#380; rezerwacj&#281;</button>
+                        <button type="submit" class="btn btn-filled" style="width: 100%;" data-i18n="res_submit">Wy&#347;lij zapytanie</button>
                     </form>
 
                     <div class="reservation-info">
@@ -1610,11 +1611,11 @@
                         </div>
                         <div class="res-info-item">
                             <div class="res-info-label" data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</div>
-                            <div class="res-info-value" data-i18n="res_checkin_value">15:00 / 11:00</div>
+                            <div class="res-info-value" data-i18n="res_checkin_value">16:00 / 12:00</div>
                         </div>
                         <div class="res-info-item">
                             <div class="res-info-label" data-i18n="res_parking_label">Parking</div>
-                            <div class="res-info-value" data-i18n="res_parking_value">Zamkni&#281;ty, monitorowany</div>
+                            <div class="res-info-value" data-i18n="res_parking_value">Zamkni&#281;ty</div>
                             <div class="res-info-note" data-i18n="res_parking_note">35 z&#322; / dob&#281;</div>
                             <a href="https://www.google.com/maps/dir/?api=1&destination=50.66850353746782,17.918459302692465&travelmode=driving"
                                target="_blank" rel="noopener"
@@ -1623,7 +1624,7 @@
                         </div>
                         <div class="res-info-item">
                             <div class="res-info-label" data-i18n="res_pets_label">Zwierz&#281;ta</div>
-                            <div class="res-info-value" data-i18n="res_pets_value">Mile widziane</div>
+                            <div class="res-info-value" data-i18n="res_pets_value">Tylko psy (maks. 2)</div>
                             <div class="res-info-note" data-i18n="res_pets_note">Dodatkowa op&#322;ata 40 z&#322; / dob&#281;</div>
                         </div>
                     </div>
@@ -1647,8 +1648,7 @@
                         <div class="contact-item">
                             <div class="contact-label" data-i18n="contact_phone_label">Telefon</div>
                             <div class="contact-value">
-                                <a href="tel:+48774113501">(+48) 77 411 35 01</a><br>
-                                <a href="tel:+48774413502">(+48) 77 441 35 02</a>
+                                <a href="tel:+48774113501">(+48) 77 411 35 01</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1837,7 +1837,7 @@
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>15:00 / 11:00</span></div>
+                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
                                 <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
                                 <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
                             </div>
@@ -1899,7 +1899,7 @@
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>15:00 / 11:00</span></div>
+                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
                                 <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
                                 <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
                             </div>
@@ -1961,7 +1961,7 @@
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>15:00 / 11:00</span></div>
+                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
                                 <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
                                 <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
                             </div>
@@ -2023,7 +2023,7 @@
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>15:00 / 11:00</span></div>
+                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
                                 <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
                                 <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
                             </div>
@@ -2106,7 +2106,7 @@
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>15:00 / 11:00</span></div>
+                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
                                 <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
                                 <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
                             </div>
@@ -2350,43 +2350,40 @@
             }
         })();
 
-        // === RESERVATION FORM ===
+        // === CONTACT FORM (Formspree) ===
         function handleReservation(e) {
             e.preventDefault();
             var form = e.target;
             var data = new FormData(form);
-            var name = data.get('name');
-            var email = data.get('email');
-            var phone = data.get('phone');
-            var checkin = data.get('checkin');
-            var checkout = data.get('checkout');
-            var rooms = data.get('rooms');
-            var guests = data.get('guests');
-            var notes = data.get('notes') || 'brak';
+            var name = data.get('name') || '';
+            var checkin = data.get('checkin') || '';
+            var checkout = data.get('checkout') || '';
 
-            var subject = encodeURIComponent('Rezerwacja - ' + name + ' (' + checkin + ' - ' + checkout + ')');
-            var body = encodeURIComponent(
-                'Imie i nazwisko: ' + name + '\n' +
-                'E-mail: ' + email + '\n' +
-                'Telefon: ' + phone + '\n' +
-                'Data przyjazdu: ' + checkin + '\n' +
-                'Data wyjazdu: ' + checkout + '\n' +
-                'Liczba pokoi: ' + rooms + '\n' +
-                'Liczba osob: ' + guests + '\n' +
-                'Uwagi: ' + notes
-            );
+            data.set('_subject', 'Zapytanie o rezerwacje - ' + name + ' (' + checkin + ' - ' + checkout + ')');
+            data.set('_replyto', data.get('email') || '');
 
-            window.location.href = 'mailto:rezerwacja@hotel-starka.pl?subject=' + subject + '&body=' + body;
-
-            // Show confirmation using i18n
             var lang = typeof getCurrentLanguage === 'function' ? getCurrentLanguage() : 'pl';
-            var thanksTitle = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang].res_thanks : 'Dziekujemy!';
-            var thanksText = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang].res_thanks_text : 'Prosimy o kontakt telefoniczny lub mailowy.';
+            var t = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : {};
+            var thanksTitle = t.res_thanks || 'Dziekujemy!';
+            var thanksText = t.res_thanks_text || 'Skontaktujemy sie z Panstwem mailowo lub telefonicznie.';
+            var errorText = t.res_error || 'Wystapil blad. Prosimy o kontakt telefoniczny lub mailowy.';
 
-            form.innerHTML = '<div style="text-align:center; padding: 40px 0;">' +
-                '<p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 12px;">' + thanksTitle + '</p>' +
-                '<p style="color: var(--gold-light); opacity: 0.8;">' + thanksText + '</p>' +
-                '</div>';
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                if (response.ok) {
+                    form.innerHTML = '<div style="text-align:center; padding: 40px 0;">' +
+                        '<p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 12px;">' + thanksTitle + '</p>' +
+                        '<p style="color: var(--gold-light); opacity: 0.9;">' + thanksText + '</p>' +
+                        '</div>';
+                } else {
+                    alert(errorText);
+                }
+            }).catch(function() {
+                alert(errorText);
+            });
         }
 
         // === LIGHTBOX ===
