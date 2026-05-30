@@ -563,6 +563,22 @@
 
         textarea.form-input { min-height: 100px; resize: vertical; }
 
+        select.form-input {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23c9a96e'%3e%3cpath d='M5.5 7.5l4.5 5 4.5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 18px;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+        select.form-input option {
+            background: var(--brown);
+            color: var(--cream);
+        }
+
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
         .form-notice {
@@ -1644,6 +1660,21 @@
                                 <label class="form-label" for="res-guests" data-i18n="res_guests">Liczba os&#243;b *</label>
                                 <input class="form-input" type="number" id="res-guests" name="guests" min="1" value="1" required>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="res-room-category" data-i18n="res_room_category">Preferowana kategoria pokoju</label>
+                            <select class="form-input" id="res-room-category" name="room_category">
+                                <option value="" data-i18n="res_room_category_any">Bez preferencji</option>
+                                <option value="SGL" data-i18n="room_single_name">Pok&#243;j Jednoosobowy</option>
+                                <option value="DBL" data-i18n="room_double_name">Pok&#243;j Dwuosobowy</option>
+                                <option value="VIEW" data-i18n="room_view_name">Pok&#243;j z Widokiem na Rzek&#281;</option>
+                                <option value="BAL" data-i18n="room_bal_name">Pok&#243;j z Balkonem</option>
+                                <option value="MUR" data-i18n="room_mur_name">Pok&#243;j z Murem Pruskim</option>
+                                <option value="PAN" data-i18n="room_pan_name">Pok&#243;j Panoramiczny</option>
+                                <option value="SUP" data-i18n="room_superior_name">Pok&#243;j Superior</option>
+                                <option value="APA" data-i18n="room_apartment_name">Apartament</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
