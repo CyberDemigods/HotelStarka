@@ -1424,7 +1424,7 @@
 
                     <div class="room-card fade-in">
                         <div class="room-card-img">
-                            <img src="img/room-double.webp" alt="Pok&#243;j dwuosobowy z widokiem na rzek&#281;">
+                            <img src="img/room-view.webp" alt="Pok&#243;j dwuosobowy z widokiem na rzek&#281;">
                             <div class="room-card-badge">380 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
@@ -1443,7 +1443,7 @@
 
                     <div class="room-card fade-in">
                         <div class="room-card-img">
-                            <img src="img/room-deluxe.webp" alt="Pok&#243;j z balkonem">
+                            <img src="img/room-bal.webp" alt="Pok&#243;j z balkonem">
                             <div class="room-card-badge">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
@@ -1462,7 +1462,7 @@
 
                     <div class="room-card fade-in">
                         <div class="room-card-img">
-                            <img src="img/room-deluxe.webp" alt="Pok&#243;j z murem pruskim">
+                            <img src="img/room-mur.webp" alt="Pok&#243;j z murem pruskim">
                             <div class="room-card-badge">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
@@ -1475,25 +1475,6 @@
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="room-card fade-in">
-                        <div class="room-card-img">
-                            <img src="img/room-superior.webp" alt="Pok&#243;j panoramiczny">
-                            <div class="room-card-badge">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
-                        </div>
-                        <div class="room-card-body">
-                            <h3 class="room-card-name" data-i18n="room_pan_name">Pok&#243;j Panoramiczny</h3>
-                            <p class="room-card-meta" data-i18n="room_pan_meta">24 m&sup2; &middot; max 3 osoby &middot; &#321;&#243;&#380;ko 180&times;200</p>
-                            <p class="room-card-desc" data-i18n="room_pan_desc">Pok&#243;j z panoramicznym przeszkleniem otwieraj&#261;cym widok na zakole Odry. Du&#380;o &#347;wiat&#322;a i przestrzeni.</p>
-                            <div class="room-card-amenities">
-                                <span class="amenity-tag" data-i18n="amenity_panorama">Panorama Odry</span>
-                                <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
-                                <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
-                                <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
-                                <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
                             </div>
                         </div>
                     </div>
@@ -1583,11 +1564,6 @@
                             <td><span class="price">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
                         </tr>
                         <tr>
-                            <td data-i18n="room_pan_name">Pok&#243;j Panoramiczny</td>
-                            <td>24 m&sup2;</td>
-                            <td><span class="price">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
-                        </tr>
-                        <tr>
                             <td data-i18n="room_superior_name">Pok&#243;j Superior</td>
                             <td>32 m&sup2;</td>
                             <td><span class="price">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
@@ -1671,7 +1647,6 @@
                                 <option value="VIEW" data-i18n="room_view_name">Pok&#243;j z Widokiem na Rzek&#281;</option>
                                 <option value="BAL" data-i18n="room_bal_name">Pok&#243;j z Balkonem</option>
                                 <option value="MUR" data-i18n="room_mur_name">Pok&#243;j z Murem Pruskim</option>
-                                <option value="PAN" data-i18n="room_pan_name">Pok&#243;j Panoramiczny</option>
                                 <option value="SUP" data-i18n="room_superior_name">Pok&#243;j Superior</option>
                                 <option value="APA" data-i18n="room_apartment_name">Apartament</option>
                             </select>
@@ -1989,9 +1964,11 @@
                             <div class="room-gallery">
                                 <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
                                 <div class="room-gallery-grid" data-gallery="double">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 0)">
-                                        <img src="img/gallery/double/1.webp" alt="" loading="lazy">
-                                    </div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 0)"><img src="img/gallery/double/1.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 1)"><img src="img/gallery/double/2.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 2)"><img src="img/gallery/double/3.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 3)"><img src="img/gallery/double/4.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('double', 4)"><img src="img/gallery/double/5.webp" alt="" loading="lazy"></div>
                                 </div>
                             </div>
                         </div>
@@ -2017,7 +1994,7 @@
     <div class="page-section" id="page-room-bal">
         <div class="room-detail">
             <div class="room-detail-hero">
-                <img src="img/room-deluxe.webp" alt="Pok&#243;j z Balkonem - Hotel Starka">
+                <img src="img/room-bal.webp" alt="Pok&#243;j z Balkonem - Hotel Starka">
                 <div class="room-detail-hero-overlay"></div>
                 <div class="room-detail-hero-content">
                     <div class="room-detail-price">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
@@ -2052,9 +2029,12 @@
                             <div class="room-gallery">
                                 <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
                                 <div class="room-gallery-grid" data-gallery="bal">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 0)">
-                                        <img src="img/gallery/deluxe/1.webp" alt="" loading="lazy">
-                                    </div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 0)"><img src="img/gallery/bal/1.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 1)"><img src="img/gallery/bal/2.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 2)"><img src="img/gallery/bal/3.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 3)"><img src="img/gallery/bal/4.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 4)"><img src="img/gallery/bal/5.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('bal', 5)"><img src="img/gallery/bal/6.webp" alt="" loading="lazy"></div>
                                 </div>
                             </div>
                         </div>
@@ -2114,9 +2094,11 @@
                             <div class="room-gallery">
                                 <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
                                 <div class="room-gallery-grid" data-gallery="superior">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 0)">
-                                        <img src="img/gallery/superior/1.webp" alt="" loading="lazy">
-                                    </div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 0)"><img src="img/gallery/superior/1.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 1)"><img src="img/gallery/superior/2.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 2)"><img src="img/gallery/superior/3.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 3)"><img src="img/gallery/superior/4.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('superior', 4)"><img src="img/gallery/superior/5.webp" alt="" loading="lazy"></div>
                                 </div>
                             </div>
                         </div>
@@ -2194,12 +2176,6 @@
                                     <div class="room-gallery-thumb" onclick="openLightbox('apartment', 5)">
                                         <img src="img/gallery/apartment/6.webp" alt="" loading="lazy">
                                     </div>
-                                    <div class="room-gallery-thumb" onclick="openLightbox('apartment', 6)">
-                                        <img src="img/gallery/apartment/7.webp" alt="" loading="lazy">
-                                    </div>
-                                    <div class="room-gallery-thumb" onclick="openLightbox('apartment', 7)">
-                                        <img src="img/gallery/apartment/8.webp" alt="" loading="lazy">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2225,7 +2201,7 @@
     <div class="page-section" id="page-room-view">
         <div class="room-detail">
             <div class="room-detail-hero">
-                <img src="img/room-double.webp" alt="Pok&#243;j z Widokiem na Rzek&#281; - Hotel Starka">
+                <img src="img/room-view.webp" alt="Pok&#243;j z Widokiem na Rzek&#281; - Hotel Starka">
                 <div class="room-detail-hero-overlay"></div>
                 <div class="room-detail-hero-content">
                     <div class="room-detail-price">380 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
@@ -2259,9 +2235,12 @@
                             <div class="room-gallery">
                                 <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
                                 <div class="room-gallery-grid" data-gallery="view">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 0)">
-                                        <img src="img/gallery/double/1.webp" alt="" loading="lazy">
-                                    </div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 0)"><img src="img/gallery/view/1.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 1)"><img src="img/gallery/view/2.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 2)"><img src="img/gallery/view/3.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 3)"><img src="img/gallery/view/4.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 4)"><img src="img/gallery/view/5.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('view', 5)"><img src="img/gallery/view/6.webp" alt="" loading="lazy"></div>
                                 </div>
                             </div>
                         </div>
@@ -2287,7 +2266,7 @@
     <div class="page-section" id="page-room-mur">
         <div class="room-detail">
             <div class="room-detail-hero">
-                <img src="img/room-deluxe.webp" alt="Pok&#243;j z Murem Pruskim - Hotel Starka">
+                <img src="img/room-mur.webp" alt="Pok&#243;j z Murem Pruskim - Hotel Starka">
                 <div class="room-detail-hero-overlay"></div>
                 <div class="room-detail-hero-content">
                     <div class="room-detail-price">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
@@ -2321,76 +2300,17 @@
                             <div class="room-gallery">
                                 <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
                                 <div class="room-gallery-grid" data-gallery="mur">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 0)">
-                                        <img src="img/gallery/deluxe/1.webp" alt="" loading="lazy">
-                                    </div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 0)"><img src="img/gallery/mur/1.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 1)"><img src="img/gallery/mur/2.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 2)"><img src="img/gallery/mur/3.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 3)"><img src="img/gallery/mur/4.webp" alt="" loading="lazy"></div>
+                                    <div class="room-gallery-thumb" onclick="openLightbox('mur', 4)"><img src="img/gallery/mur/5.webp" alt="" loading="lazy"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="room-detail-sidebar">
                             <div class="room-detail-sidebar-title" data-i18n="rd_sidebar_title">Rezerwacja pokoju</div>
                             <div class="room-detail-sidebar-price">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
-                            <p class="room-detail-sidebar-note" data-i18n="rd_sidebar_note">Cena zawiera &#347;niadanie. Ceny mog&#261; si&#281; r&#243;&#380;ni&#263; w zale&#380;no&#347;ci od terminu.</p>
-                            <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
-                            <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
-                            <div class="room-detail-sidebar-info">
-                                <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Zwierz&#281;ta</span><span>40 z&#322;</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- POKOJ PANORAMICZNY (PAN) -->
-    <div class="page-section" id="page-room-pan">
-        <div class="room-detail">
-            <div class="room-detail-hero">
-                <img src="img/room-superior.webp" alt="Pok&#243;j Panoramiczny - Hotel Starka">
-                <div class="room-detail-hero-overlay"></div>
-                <div class="room-detail-hero-content">
-                    <div class="room-detail-price">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
-                </div>
-            </div>
-            <div class="room-detail-body">
-                <div class="container">
-                    <a class="room-detail-back" onclick="showSection('main','pokoje'); return false;" data-i18n="rd_back">&#8592; Powr&#243;t do pokoi</a>
-                    <div class="room-detail-grid">
-                        <div>
-                            <h1 class="room-detail-name" data-i18n="room_pan_name">Pok&#243;j Panoramiczny</h1>
-                            <p class="room-detail-meta" data-i18n="room_pan_meta">24 m&#178; &#183; max 3 osoby &#183; &#321;&#243;&#380;ko 180&#215;200</p>
-                            <p class="room-detail-desc" data-i18n="rd_pan_desc_full">Pok&#243;j z panoramicznym przeszkleniem otwieraj&#261;cym widok na zakole Odry &#8212; jedno z najbardziej widokowych wn&#281;trz w Opolu. Mn&#243;stwo naturalnego &#347;wiat&#322;a, przestrze&#324; i klimat sprzyjaj&#261;cy zar&#243;wno wypoczynkowi, jak i pracy zdalnej z niesamowit&#261; sceneri&#261; za oknem.</p>
-
-                            <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
-                            <ul class="room-detail-amenities-list">
-                                <li data-i18n="amenity_panorama">Panorama Odry</li>
-                                <li data-i18n="amenity_wifi">Wi-Fi</li>
-                                <li data-i18n="amenity_ac">Klimatyzacja</li>
-                                <li data-i18n="amenity_minibar">Mini-bar</li>
-                                <li data-i18n="amenity_vod">VOD</li>
-                                <li data-i18n="amenity_safe">Sejf</li>
-                                <li data-i18n="rd_amenity_shower">Prysznic</li>
-                                <li data-i18n="rd_amenity_desk">Biurko do pracy</li>
-                                <li data-i18n="rd_amenity_coffee">Ekspres do kawy</li>
-                                <li data-i18n="rd_amenity_extra_bed">Mo&#380;liwo&#347;&#263; dostawki</li>
-                                <li data-i18n="rd_amenity_towels">R&#281;czniki i kosmetyki</li>
-                            </ul>
-
-                            <div class="room-gallery">
-                                <h3 class="room-gallery-title" data-i18n="rd_gallery_title">Galeria zdj&#281;&#263;</h3>
-                                <div class="room-gallery-grid" data-gallery="pan">
-                                    <div class="room-gallery-thumb" onclick="openLightbox('pan', 0)">
-                                        <img src="img/gallery/superior/1.webp" alt="" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="room-detail-sidebar">
-                            <div class="room-detail-sidebar-title" data-i18n="rd_sidebar_title">Rezerwacja pokoju</div>
-                            <div class="room-detail-sidebar-price">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                             <p class="room-detail-sidebar-note" data-i18n="rd_sidebar_note">Cena zawiera &#347;niadanie. Ceny mog&#261; si&#281; r&#243;&#380;ni&#263; w zale&#380;no&#347;ci od terminu.</p>
                             <a href="#rezerwacja" class="btn btn-filled" onclick="showSection('main','rezerwacja')" data-i18n="hero_btn">Zarezerwuj pobyt</a>
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
@@ -2549,9 +2469,8 @@
             { selector: '.rooms-grid .room-card:nth-child(3)', page: 'room-view' },
             { selector: '.rooms-grid .room-card:nth-child(4)', page: 'room-bal' },
             { selector: '.rooms-grid .room-card:nth-child(5)', page: 'room-mur' },
-            { selector: '.rooms-grid .room-card:nth-child(6)', page: 'room-pan' },
-            { selector: '.rooms-grid .room-card:nth-child(7)', page: 'room-superior' },
-            { selector: '.rooms-grid .room-card:nth-child(8)', page: 'room-apartment' }
+            { selector: '.rooms-grid .room-card:nth-child(6)', page: 'room-superior' },
+            { selector: '.rooms-grid .room-card:nth-child(7)', page: 'room-apartment' }
         ];
         roomCards.forEach(function(rc) {
             var card = document.querySelector(rc.selector);
@@ -2679,17 +2598,14 @@
         }
 
         // === LIGHTBOX ===
-        // Placeholdery galerii dla nowych kategorii (view/bal/mur/pan) reuzywaja istniejacych zdjec
-        // do czasu otrzymania docelowych obrazow od klienta.
         var lightboxData = {
-            single: ['img/gallery/single/1.webp','img/gallery/single/2.webp','img/gallery/single/3.webp','img/gallery/single/4.webp','img/gallery/single/5.webp'],
-            double: ['img/gallery/double/1.webp'],
-            view: ['img/gallery/double/1.webp'],
-            bal: ['img/gallery/deluxe/1.webp'],
-            mur: ['img/gallery/deluxe/1.webp'],
-            pan: ['img/gallery/superior/1.webp'],
-            superior: ['img/gallery/superior/1.webp'],
-            apartment: ['img/gallery/apartment/1.webp','img/gallery/apartment/2.webp','img/gallery/apartment/3.webp','img/gallery/apartment/4.webp','img/gallery/apartment/5.webp','img/gallery/apartment/6.webp','img/gallery/apartment/7.webp','img/gallery/apartment/8.webp']
+            single:    ['img/gallery/single/1.webp','img/gallery/single/2.webp','img/gallery/single/3.webp','img/gallery/single/4.webp','img/gallery/single/5.webp'],
+            double:    ['img/gallery/double/1.webp','img/gallery/double/2.webp','img/gallery/double/3.webp','img/gallery/double/4.webp','img/gallery/double/5.webp'],
+            view:      ['img/gallery/view/1.webp','img/gallery/view/2.webp','img/gallery/view/3.webp','img/gallery/view/4.webp','img/gallery/view/5.webp','img/gallery/view/6.webp'],
+            bal:       ['img/gallery/bal/1.webp','img/gallery/bal/2.webp','img/gallery/bal/3.webp','img/gallery/bal/4.webp','img/gallery/bal/5.webp','img/gallery/bal/6.webp'],
+            mur:       ['img/gallery/mur/1.webp','img/gallery/mur/2.webp','img/gallery/mur/3.webp','img/gallery/mur/4.webp','img/gallery/mur/5.webp'],
+            superior:  ['img/gallery/superior/1.webp','img/gallery/superior/2.webp','img/gallery/superior/3.webp','img/gallery/superior/4.webp','img/gallery/superior/5.webp'],
+            apartment: ['img/gallery/apartment/1.webp','img/gallery/apartment/2.webp','img/gallery/apartment/3.webp','img/gallery/apartment/4.webp','img/gallery/apartment/5.webp','img/gallery/apartment/6.webp']
         };
         var currentLightbox = { room: null, index: 0 };
 
