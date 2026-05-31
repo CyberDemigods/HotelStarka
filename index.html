@@ -1292,11 +1292,11 @@
                 Hotel Starka
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#o-hotelu" onclick="closeMenu()" data-i18n="nav_about">O hotelu</a></li>
-                <li><a href="#pokoje" onclick="closeMenu()" data-i18n="nav_rooms">Pokoje</a></li>
-                <li><a href="#cennik" onclick="closeMenu()" data-i18n="nav_pricing">Cennik</a></li>
-                <li><a href="#rezerwacja" onclick="closeMenu()" data-i18n="nav_reservation">Kontakt</a></li>
-                <li><a href="#kontakt" onclick="closeMenu()" data-i18n="nav_contact">Adres</a></li>
+                <li><a href="#o-hotelu" onclick="closeMenu(); showSection('main','o-hotelu'); return false;" data-i18n="nav_about">O hotelu</a></li>
+                <li><a href="#pokoje" onclick="closeMenu(); showSection('main','pokoje'); return false;" data-i18n="nav_rooms">Pokoje</a></li>
+                <li><a href="#cennik" onclick="closeMenu(); showSection('main','cennik'); return false;" data-i18n="nav_pricing">Cennik</a></li>
+                <li><a href="#rezerwacja" onclick="closeMenu(); showSection('main','rezerwacja'); return false;" data-i18n="nav_reservation">Kontakt</a></li>
+                <li><a href="#kontakt" onclick="closeMenu(); showSection('main','kontakt'); return false;" data-i18n="nav_contact">Adres</a></li>
                 <li><a href="http://restauracjastarka.pl/" target="_blank" rel="noopener" data-i18n="nav_restaurant">Restauracja</a></li>
             </ul>
             <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Menu">
