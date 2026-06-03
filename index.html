@@ -29,14 +29,14 @@
             --brown: #623304;
             --brown-medium: #7A4A1E;
             --brown-light: #A67C52;
-            --gold: #C9A96E;
-            --gold-light: #D4BA8A;
+            --gold: #8C6A2E;
+            --gold-light: #C9A96E;
             --cream: #F5F0E8;
             --cream-dark: #E8DFD0;
             --white: #FDFCFA;
             --text: #2C1810;
             --text-light: #5C4A3A;
-            --text-muted: #8B7B6B;
+            --text-muted: #6B5C4D;
             --overlay: rgba(59, 31, 11, 0.6);
             --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
             --font-body: 'Raleway', 'Segoe UI', Arial, sans-serif;
@@ -392,7 +392,12 @@
             background: var(--white);
             overflow: hidden;
             transition: transform 0.4s, box-shadow 0.4s;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
         }
+        .room-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
         .room-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 50px rgba(59, 31, 11, 0.1);
@@ -1343,11 +1348,11 @@
                         <h2 class="section-title" data-i18n="about_title">Ponad sto lat historii</h2>
                         <div class="section-divider"></div>
                         <p class="section-text" data-i18n="about_text1">
-                            Szanowni Pa&#324;stwo, nasz hotel powsta&#322; na bazie dwunastoletnich do&#347;wiadcze&#324; z prowadzenia restauracji, podczas kt&#243;rych zbierali&#347;my informacje od go&#347;ci na temat ich preferencji w hotelach na ca&#322;ym &#347;wiecie.
+                            Szanowni Pa&#324;stwo, chcieliby&#347;my zaprosi&#263; Was do odwiedzenia naszego hotelu.<br><br>Przez dwana&#347;cie lat prowadzenia restauracji zebrali&#347;my wiele informacji od naszych go&#347;ci &#8212; co im si&#281; podoba, a co nie &#8212; w hotelach na ca&#322;ym &#347;wiecie.<br><br>Dzi&#281;ki tym informacjom starali&#347;my si&#281; stworzy&#263; miejsce, w kt&#243;rym sp&#281;dz&#261; Pa&#324;stwo mi&#322;o czas.<br><br>Zar&#243;wno wyposa&#380;enie pokoi, jak i obs&#322;ug&#281; pr&#243;bowali&#347;my dobra&#263; kluczem, jakim pos&#322;ugujemy si&#281; od lat w restauracji.
                         </p>
                         <br>
                         <p class="section-text" data-i18n="about_text2">
-                            Hotel mie&#347;ci si&#281; w ponad stuletniej kamienicy, kt&#243;rej architektura pozwoli&#322;a nam na stworzenie dwudziestu niepowtarzalnych pokoi. Ka&#380;dy wyposa&#380;ony w nowoczesn&#261; telewizj&#281; VOD, mini-bar, klimatyzacj&#281;, sejf i internet.
+                            Starali&#347;my si&#281; stworzy&#263; miejsce, w kt&#243;rym poczuj&#261; si&#281; Pa&#324;stwo jak w domu.<br><br>Nasz hotel znajduje si&#281; w ponad stuletniej kamienicy, kt&#243;rej architektura pozwoli&#322;a nam na stworzenie 20 niepowtarzalnych pokoi.<br><br>Ka&#380;dy z nich jest wyposa&#380;ony w telewizj&#281;, mini-bar, klimatyzacj&#281;, sejf oraz internet.
                         </p>
                         <div class="about-features">
                             <div class="feature">
@@ -1383,14 +1388,13 @@
                 </div>
                 <div class="rooms-grid">
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-jednoosobowy" onclick="event.preventDefault(); showSection('room-single'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-single.webp" alt="Pok&#243;j jednoosobowy">
                             <div class="room-card-badge">300 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_single_name">Pok&#243;j Jednoosobowy</h3>
-                            <p class="room-card-meta" data-i18n="room_single_meta">16 m&sup2; &middot; 1 osoba &middot; &#321;&#243;&#380;ko 80&times;200</p>
                             <p class="room-card-desc" data-i18n="room_single_desc">Komfortowo wyposa&#380;ony pok&#243;j z wygodnym &#322;&#243;&#380;kiem, biurkiem do pracy, prywatn&#261; &#322;azienk&#261; oraz ekspresem do kawy.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
@@ -1398,18 +1402,18 @@
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
                                 <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
                                 <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-dwuosobowy" onclick="event.preventDefault(); showSection('room-double'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-double.webp" alt="Pok&#243;j dwuosobowy">
                             <div class="room-card-badge">370 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
-                            <h3 class="room-card-name" data-i18n="room_double_name">Pok&#243;j Dwuosobowy</h3>
-                            <p class="room-card-meta" data-i18n="room_double_meta">22 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 160&times;200 (1 lub 2 &#322;&#243;&#380;ka)</p>
+                            <h3 class="room-card-name" data-i18n="room_double_name">Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami</h3>
                             <p class="room-card-desc" data-i18n="room_double_desc">Elegancki pok&#243;j z komfortowym wyposa&#380;eniem, biurkiem do pracy, prywatn&#261; &#322;azienk&#261; i ekspresem do kawy.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
@@ -1417,38 +1421,38 @@
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
                                 <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
                                 <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
-                                <span class="amenity-tag" data-i18n="amenity_cosmetics">Kosmetyki</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-z-widokiem-na-rzeke" onclick="event.preventDefault(); showSection('room-view'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-view.webp" alt="Pok&#243;j dwuosobowy z widokiem na rzek&#281;">
                             <div class="room-card-badge">380 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_view_name">Pok&#243;j z Widokiem na Rzek&#281;</h3>
-                            <p class="room-card-meta" data-i18n="room_view_meta">22 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 160&times;200</p>
                             <p class="room-card-desc" data-i18n="room_view_desc">Pok&#243;j dwuosobowy z malowniczym widokiem na Odr&#281;. Mo&#380;liwo&#347;&#263; rozdzielenia &#322;&#243;&#380;ka na dwa pojedyncze. Pe&#322;ne wyposa&#380;enie i prywatna &#322;azienka.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_riverview">Widok na rzek&#281;</span>
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
+                                <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
                                 <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-z-balkonem" onclick="event.preventDefault(); showSection('room-bal'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-bal.webp" alt="Pok&#243;j z balkonem">
                             <div class="room-card-badge">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_bal_name">Pok&#243;j Deluxe z Balkonem</h3>
-                            <p class="room-card-meta" data-i18n="room_bal_meta">24 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 160&times;200</p>
                             <p class="room-card-desc" data-i18n="room_bal_desc">Przestronny pok&#243;j dwuosobowy z prywatnym balkonem i widokiem na Odr&#281;. Idealny na poranek z kaw&#261; na &#347;wie&#380;ym powietrzu.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_balcony">Balkon</span>
@@ -1456,18 +1460,20 @@
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
+                                <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
+                                <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-mur-pruski" onclick="event.preventDefault(); showSection('room-mur'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-mur.webp" alt="Pok&#243;j z murem pruskim">
                             <div class="room-card-badge">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_mur_name">Pok&#243;j Deluxe z Murem Pruskim</h3>
-                            <p class="room-card-meta" data-i18n="room_mur_meta">30 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 160&times;200</p>
                             <p class="room-card-desc" data-i18n="room_mur_desc">Wyj&#261;tkowy pok&#243;j z ods&#322;oni&#281;tym, zabytkowym murem pruskim &#8212; oryginalnym elementem architektury Starki. Po&#322;&#261;czenie historii z komfortem. Widok na rzek&#281;.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_prussian_wall">Mur pruski</span>
@@ -1475,18 +1481,20 @@
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
+                                <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
+                                <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#pokoj-superior" onclick="event.preventDefault(); showSection('room-superior'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-superior.webp" alt="Pok&#243;j Superior Panorama">
                             <div class="room-card-badge">450 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_superior_name">Pok&#243;j Superior Panorama</h3>
-                            <p class="room-card-meta" data-i18n="room_superior_meta">32 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 160&times;200</p>
                             <p class="room-card-desc" data-i18n="room_superior_desc">Najwi&#281;kszy z pokoi dwuosobowych. Przestronne wn&#281;trze z sof&#261;, fotelami i biurkiem do pracy. Widok na rzek&#281;.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_riverview">Widok na rzek&#281;</span>
@@ -1494,18 +1502,20 @@
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
                                 <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
+                                <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
+                                <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="room-card fade-in">
+                    <a class="room-card fade-in" href="#apartament" onclick="event.preventDefault(); showSection('room-apartment'); return false;">
                         <div class="room-card-img">
                             <img src="img/room-apartment.webp" alt="Apartament">
                             <div class="room-card-badge">500 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
                         </div>
                         <div class="room-card-body">
                             <h3 class="room-card-name" data-i18n="room_apartment_name">Apartament</h3>
-                            <p class="room-card-meta" data-i18n="room_apartment_meta">50 m&sup2; &middot; max 2 osoby doros&#322;e &middot; &#321;&#243;&#380;ko 180&times;200</p>
                             <p class="room-card-desc" data-i18n="room_apartment_desc">Wyj&#261;tkowy apartament &#322;&#261;cz&#261;cy przedpok&#243;j, salon i sypialni&#281; z pi&#281;knym widokiem na rzek&#281;. &#321;azienka z prysznicem i wolnostoj&#261;c&#261; wann&#261;.</p>
                             <div class="room-card-amenities">
                                 <span class="amenity-tag" data-i18n="amenity_riverview">Widok na rzek&#281;</span>
@@ -1513,9 +1523,13 @@
                                 <span class="amenity-tag" data-i18n="amenity_lounge">Salon</span>
                                 <span class="amenity-tag" data-i18n="amenity_wifi">Wi-Fi</span>
                                 <span class="amenity-tag" data-i18n="amenity_ac">Klimatyzacja</span>
+                                <span class="amenity-tag" data-i18n="amenity_minibar">Mini-bar</span>
+                                <span class="amenity-tag" data-i18n="amenity_safe">Sejf</span>
+                                <span class="amenity-tag" data-i18n="amenity_vod">VOD</span>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 </div>
             </div>
@@ -1544,7 +1558,7 @@
                             <td><span class="price">300 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
                         </tr>
                         <tr>
-                            <td data-i18n="room_double_name">Pok&#243;j Dwuosobowy</td>
+                            <td data-i18n="room_double_name">Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami</td>
                             <td>22 m&sup2;</td>
                             <td><span class="price">370 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
                         </tr>
@@ -1581,7 +1595,7 @@
                     &#8226; <span data-i18n="pricing_note_parking">Parking zamkni&#281;ty: 35 z&#322; / dob&#281; / samoch&#243;d. Liczba miejsc ograniczona &#8212; wymagana wcze&#347;niejsza rezerwacja</span><br>
                     &#8226; <span data-i18n="pricing_note_extra_bed">&#321;&#243;&#380;eczko turystyczne dla dziecka 0&#8211;3 lata: 20 z&#322; / dob&#281; &#8226; Dostawka dla dziecka 4&#8211;15 lat: 80 z&#322; / dob&#281; (w pokojach dwuosobowych, ilo&#347;&#263; ograniczona)</span><br>
                     &#8226; <span data-i18n="pricing_note_pets">Psy: 40 z&#322; / dob&#281; (maks. 2)</span><br>
-                    &#8226; <span data-i18n="pricing_note_beds">Tylko klasyczny Pok&#243;j Dwuosobowy ma dwa osobne materace 80&times;200, kt&#243;re mo&#380;na rozdzieli&#263; na dwa pojedyncze &#322;&#243;&#380;ka. Pozosta&#322;e pokoje dwuosobowe maj&#261; jeden pe&#322;ny materac 160&times;200, Apartament &#8212; jeden materac 180&times;200</span><br>
+                    &#8226; <span data-i18n="pricing_note_beds">Tylko klasyczny Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami ma dwa osobne materace 80&times;200, kt&#243;re mo&#380;na rozdzieli&#263; na dwa pojedyncze &#322;&#243;&#380;ka. Pozosta&#322;e pokoje dwuosobowe maj&#261; jeden pe&#322;ny materac 160&times;200, Apartament &#8212; jeden materac 180&times;200</span><br>
                     &#8226; <span data-i18n="pricing_note_prices">Ceny mog&#261; si&#281; r&#243;&#380;ni&#263; w zale&#380;no&#347;ci od terminu pobytu</span>
                 </div>
             </div>
@@ -1644,7 +1658,7 @@
                             <select class="form-input" id="res-room-category" name="room_category">
                                 <option value="" data-i18n="res_room_category_any">Bez preferencji</option>
                                 <option value="SGL" data-i18n="room_single_name">Pok&#243;j Jednoosobowy</option>
-                                <option value="DBL" data-i18n="room_double_name">Pok&#243;j Dwuosobowy</option>
+                                <option value="DBL" data-i18n="room_double_name">Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami</option>
                                 <option value="VIEW" data-i18n="room_view_name">Pok&#243;j z Widokiem na Rzek&#281;</option>
                                 <option value="BAL" data-i18n="room_bal_name">Pok&#243;j Deluxe z Balkonem</option>
                                 <option value="MUR" data-i18n="room_mur_name">Pok&#243;j Deluxe z Murem Pruskim</option>
@@ -1871,7 +1885,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_single_name">Pok&#243;j Jednoosobowy</h1>
-                            <p class="room-detail-meta" data-i18n="room_single_meta">16 m&#178; &#183; 1 osoba &#183; &#321;&#243;&#380;ko 80&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_single_desc_full">Komfortowo wyposa&#380;ony pok&#243;j z wygodnym &#322;&#243;&#380;kiem, biurkiem do pracy, prywatn&#261; &#322;azienk&#261; z prysznicem oraz ekspresem do kawy. Idealny dla os&#243;b podro&#380;uj&#261;cych s&#322;u&#380;bowo lub turyst&#243;w szukaj&#261;cych przytulnego miejsca na nocleg w centrum Opola. Pok&#243;j wyposa&#380;ony w telewizj&#281; z Chromecastem do w&#322;asnych kont streamingowych, sejf na laptop, klimatyzacj&#281; i szybkie Wi-Fi.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -1917,8 +1930,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -1931,7 +1942,7 @@
     <div class="page-section" id="page-room-double">
         <div class="room-detail">
             <div class="room-detail-hero">
-                <img src="img/room-double.webp" alt="Pok&#243;j Dwuosobowy - Hotel Starka">
+                <img src="img/room-double.webp" alt="Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami - Hotel Starka">
                 <div class="room-detail-hero-overlay"></div>
                 <div class="room-detail-hero-content">
                     <div class="room-detail-price">370 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></div>
@@ -1942,8 +1953,7 @@
                     <a class="room-detail-back" onclick="showSection('main','pokoje'); return false;" data-i18n="rd_back">&#8592; Powr&#243;t do pokoi</a>
                     <div class="room-detail-grid">
                         <div>
-                            <h1 class="room-detail-name" data-i18n="room_double_name">Pok&#243;j Dwuosobowy</h1>
-                            <p class="room-detail-meta" data-i18n="room_double_meta">22 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 160&#215;200 (1 lub 2 &#322;&#243;&#380;ka)</p>
+                            <h1 class="room-detail-name" data-i18n="room_double_name">Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami</h1>
                             <p class="room-detail-desc" data-i18n="rd_double_desc_full">Elegancki pok&#243;j z komfortowym du&#380;ym &#322;&#243;&#380;kiem, biurkiem do pracy, prywatn&#261; &#322;azienk&#261; i ekspresem do kawy. Wn&#281;trze urz&#261;dzone z dba&#322;o&#347;ci&#261; o detale, &#322;&#261;cz&#261;ce historyczny charakter kamienicy z nowoczesnym komfortem. Dodatkowe kosmetyki &#322;azienkowe w zestawie.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -1980,8 +1990,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2006,7 +2014,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_bal_name">Pok&#243;j Deluxe z Balkonem</h1>
-                            <p class="room-detail-meta" data-i18n="room_bal_meta">24 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 160&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_bal_desc_full">Przestronny pok&#243;j dwuosobowy z prywatnym balkonem otwartym na Odr&#281;. Poranek z kaw&#261; na &#347;wie&#380;ym powietrzu lub wieczorny widok na zachody s&#322;o&#324;ca nad rzek&#261; &#8212; to to, co wyr&#243;&#380;nia ten pok&#243;j. Komfortowe &#322;&#243;&#380;ko, prywatna &#322;azienka, biurko do pracy i pe&#322;ne wyposa&#380;enie multimedialne.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -2045,8 +2052,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2071,7 +2076,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_superior_name">Pok&#243;j Superior Panorama</h1>
-                            <p class="room-detail-meta" data-i18n="room_superior_meta">32 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 160&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_superior_desc_full">Najwi&#281;kszy z pokoi dwuosobowych. Przestronne wn&#281;trze z wygodn&#261; sof&#261;, fotelami i biurkiem do pracy. Widok na rzek&#281;. Idealny zar&#243;wno do wypoczynku, jak i pracy zdalnej w komfortowych warunkach.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -2106,8 +2110,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2132,7 +2134,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_apartment_name">Apartament</h1>
-                            <p class="room-detail-meta" data-i18n="room_apartment_meta">50 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 180&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_apartment_desc_full">Wyj&#261;tkowy apartament &#322;&#261;cz&#261;cy przedpok&#243;j, przestronny salon i sypialni&#281; z pi&#281;knym widokiem na rzek&#281;. &#321;azienka z prysznicem i luksusow&#261; wolnostoj&#261;c&#261; wann&#261;. Najwi&#281;ksze i najbardziej ekskluzywne wn&#281;trze w hotelu - idealne na romantyczny weekend lub wyj&#261;tkow&#261; okazj&#281;.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -2183,8 +2184,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2209,7 +2208,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_view_name">Pok&#243;j z Widokiem na Rzek&#281;</h1>
-                            <p class="room-detail-meta" data-i18n="room_view_meta">22 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 160&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_view_desc_full">Pok&#243;j dwuosobowy z malowniczym widokiem na Odr&#281;. Komfortowa &#322;azienka z prysznicem, biurko do pracy i pe&#322;ne wyposa&#380;enie multimedialne.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -2247,8 +2245,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2273,7 +2269,6 @@
                     <div class="room-detail-grid">
                         <div>
                             <h1 class="room-detail-name" data-i18n="room_mur_name">Pok&#243;j Deluxe z Murem Pruskim</h1>
-                            <p class="room-detail-meta" data-i18n="room_mur_meta">30 m&#178; &#183; max 2 osoby doros&#322;e &#183; &#321;&#243;&#380;ko 160&#215;200</p>
                             <p class="room-detail-desc" data-i18n="rd_mur_desc_full">Jeden z dw&#243;ch wyj&#261;tkowych pokoi w hotelu z ods&#322;oni&#281;tym, zabytkowym murem pruskim &#8212; oryginalnym elementem konstrukcyjnym kamienicy. Drewniany szkielet wype&#322;niony cegli&#261; spotyka si&#281; tu z nowoczesnym przeszkleniem i komfortowym wyposa&#380;eniem. Widok na rzek&#281; dope&#322;nia ca&#322;o&#347;ci. Niepowtarzalne po&#322;&#261;czenie historii i wsp&#243;&#322;czesnego designu.</p>
 
                             <h3 class="room-detail-amenities-title" data-i18n="rd_amenities_title">Wyposa&#380;enie pokoju</h3>
@@ -2310,8 +2305,6 @@
                             <a href="tel:+48774113501" class="btn" data-i18n="rd_call">Zadzwo&#324;: 77 411 35 01</a>
                             <div class="room-detail-sidebar-info">
                                 <div><span data-i18n="res_checkin_label">Zameldowanie / Wymeldowanie</span><span>16:00 / 12:00</span></div>
-                                <div><span data-i18n="res_parking_label">Parking</span><span>35 z&#322;</span></div>
-                                <div><span data-i18n="res_pets_label">Psy</span><span>40 z&#322;</span></div>
                             </div>
                         </div>
                     </div>
@@ -2425,20 +2418,38 @@
             document.getElementById('navLinks').classList.remove('open');
         }
 
-        // === SPA SECTIONS ===
-        function showSection(section, scrollTo) {
+        // === SPA SECTIONS + URL ROUTING ===
+        // Map between internal section IDs and URL hashes.
+        var SECTION_TO_HASH = {
+            'room-single':    'pokoj-jednoosobowy',
+            'room-double':    'pokoj-dwuosobowy',
+            'room-view':      'pokoj-z-widokiem-na-rzeke',
+            'room-bal':       'pokoj-z-balkonem',
+            'room-mur':       'pokoj-mur-pruski',
+            'room-superior':  'pokoj-superior',
+            'room-apartment': 'apartament',
+            'privacy':        'polityka-prywatnosci'
+        };
+        var HASH_TO_SECTION = (function() {
+            var m = {};
+            for (var k in SECTION_TO_HASH) m[SECTION_TO_HASH[k]] = k;
+            return m;
+        })();
+        // Anchors inside main page (sections of page-main) — keep as scroll targets only.
+        var MAIN_ANCHORS = ['o-hotelu', 'pokoje', 'cennik', 'rezerwacja', 'kontakt'];
+
+        function applyShow(section, scrollTo) {
             document.querySelectorAll('.page-section').forEach(function(el) {
                 el.classList.remove('active');
             });
             if (section === 'privacy') {
                 document.getElementById('page-privacy').classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else if (section.startsWith('room-')) {
+            } else if (section && section.indexOf('room-') === 0) {
                 var el = document.getElementById('page-' + section);
                 if (el) {
                     el.classList.add('active');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    // Re-apply translations if i18n loaded
                     if (typeof setLanguage === 'function' && typeof getCurrentLanguage === 'function') {
                         setLanguage(getCurrentLanguage());
                     }
@@ -2456,23 +2467,37 @@
             }
         }
 
-        // === ROOM CARD CLICK ===
-        var roomCards = [
-            { selector: '.rooms-grid .room-card:nth-child(1)', page: 'room-single' },
-            { selector: '.rooms-grid .room-card:nth-child(2)', page: 'room-double' },
-            { selector: '.rooms-grid .room-card:nth-child(3)', page: 'room-view' },
-            { selector: '.rooms-grid .room-card:nth-child(4)', page: 'room-bal' },
-            { selector: '.rooms-grid .room-card:nth-child(5)', page: 'room-mur' },
-            { selector: '.rooms-grid .room-card:nth-child(6)', page: 'room-superior' },
-            { selector: '.rooms-grid .room-card:nth-child(7)', page: 'room-apartment' }
-        ];
-        roomCards.forEach(function(rc) {
-            var card = document.querySelector(rc.selector);
-            if (card) {
-                card.addEventListener('click', function() {
-                    showSection(rc.page);
-                });
+        function showSection(section, scrollTo) {
+            applyShow(section, scrollTo);
+            // Update URL hash (so back button + open-in-new-tab work).
+            var newHash = '';
+            if (SECTION_TO_HASH[section]) {
+                newHash = '#' + SECTION_TO_HASH[section];
+            } else if (scrollTo && MAIN_ANCHORS.indexOf(scrollTo) !== -1) {
+                newHash = '#' + scrollTo;
             }
+            var newUrl = window.location.pathname + window.location.search + newHash;
+            if (newUrl !== window.location.pathname + window.location.search + window.location.hash) {
+                history.pushState({ section: section, scrollTo: scrollTo }, '', newUrl);
+            }
+        }
+
+        function applyHashFromURL() {
+            var hash = (window.location.hash || '').replace(/^#/, '');
+            if (HASH_TO_SECTION[hash]) {
+                applyShow(HASH_TO_SECTION[hash]);
+            } else if (MAIN_ANCHORS.indexOf(hash) !== -1) {
+                applyShow('main', hash);
+            } else {
+                applyShow('main');
+            }
+        }
+
+        window.addEventListener('popstate', function() {
+            applyHashFromURL();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            applyHashFromURL();
         });
 
         // === SCROLL TO TOP ===
