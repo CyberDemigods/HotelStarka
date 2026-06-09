@@ -184,9 +184,9 @@
             font-weight: 500;
             letter-spacing: 6px;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-light);
             margin-bottom: 16px;
-            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 14px rgba(0, 0, 0, 0.6);
         }
 
         .hero-title {
@@ -283,6 +283,18 @@
         }
         .btn-filled:hover {
             background: var(--gold-light);
+            color: var(--brown-dark);
+        }
+        /* Hero CTA: filled for legibility over bright photos */
+        .hero-content .btn {
+            background: var(--gold-light);
+            color: var(--brown-dark);
+            border-color: var(--gold-light);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+        }
+        .hero-content .btn:hover {
+            background: var(--cream);
+            border-color: var(--cream);
             color: var(--brown-dark);
         }
 
@@ -1581,7 +1593,7 @@
                         </tr>
                         <tr>
                             <td data-i18n="room_mur_name">Pok&#243;j Deluxe z Murem Pruskim</td>
-                            <td>30 m&sup2;</td>
+                            <td>22 / 24 m&sup2;</td>
                             <td><span class="price">440 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
                         </tr>
                         <tr>
@@ -1591,7 +1603,7 @@
                         </tr>
                         <tr>
                             <td data-i18n="room_apartment_name">Apartament</td>
-                            <td>50 m&sup2;</td>
+                            <td>70 m&sup2;</td>
                             <td><span class="price">500 z&#322; <small data-i18n="room_per_night">/ dob&#281;</small></span></td>
                         </tr>
                     </tbody>
@@ -1601,7 +1613,7 @@
                     &#8226; <span data-i18n="pricing_note_breakfast">Cena pokoju uwzgl&#281;dnia &#347;niadanie</span><br>
                     &#8226; <span data-i18n="pricing_note_parking">Parking zamkni&#281;ty: 35 z&#322; / dob&#281; / samoch&#243;d. Liczba miejsc ograniczona &#8212; wymagana wcze&#347;niejsza rezerwacja</span><br>
                     &#8226; <span data-i18n="pricing_note_extra_bed">&#321;&#243;&#380;eczko turystyczne dla dziecka 0&#8211;3 lata: 20 z&#322; / dob&#281; &#8226; Dostawka dla dziecka 4&#8211;15 lat: 80 z&#322; / dob&#281; (w pokojach dwuosobowych, ilo&#347;&#263; ograniczona)</span><br>
-                    &#8226; <span data-i18n="pricing_note_pets">Psy: 40 z&#322; / dob&#281; (maks. 2)</span>
+                    &#8226; <span data-i18n="pricing_note_pets">Psy: 40 z&#322; / dob&#281; (maks. 2 / pok&#243;j)</span>
                     <p class="pricing-note-highlight"><strong data-i18n="pricing_note_prices">Podane ceny maj&#261; charakter orientacyjny &#8212; mog&#261; ulec zmianie w zale&#380;no&#347;ci od terminu pobytu, sezonu, wydarze&#324; specjalnych oraz indywidualnych ustale&#324;. Aktualn&#261; ofert&#281; potwierdzimy przed dokonaniem rezerwacji.</strong></p>
                 </div>
             </div>
@@ -1618,7 +1630,7 @@
                 <div class="reservation-grid">
                     <form id="reservationForm" action="https://formspree.io/f/FORMSPREE_ENDPOINT" method="POST" onsubmit="handleReservation(event)">
                         <div class="form-notice" data-i18n="res_notice">
-                            Przes&#322;anie formularza nie oznacza dokonania rezerwacji. Prosz&#281; oczekiwa&#263; na otrzymanie odpowiedzi e-mail z potwierdzeniem.
+                            Przes&#322;anie formularza nie oznacza dokonania rezerwacji. Prosz&#281; oczekiwa&#263; na otrzymanie odpowiedzi e-mail z informacj&#261; o dost&#281;pno&#347;ci.
                         </div>
 
                         <div class="form-group">
@@ -1660,9 +1672,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="res-room-category" data-i18n="res_room_category">Preferowana kategoria pokoju</label>
+                            <label class="form-label" for="res-room-category" data-i18n="res_room_category">Rodzaj pokoju</label>
                             <select class="form-input" id="res-room-category" name="room_category">
-                                <option value="" data-i18n="res_room_category_any">Bez preferencji</option>
+                                <option value="" disabled selected data-i18n="res_room_category_select">&#8212; Wybierz &#8212;</option>
                                 <option value="SGL" data-i18n="room_single_name">Pok&#243;j Jednoosobowy</option>
                                 <option value="DBL" data-i18n="room_double_name">Pok&#243;j Dwuosobowy z 1 lub 2 &#322;&#243;&#380;kami</option>
                                 <option value="VIEW" data-i18n="room_view_name">Pok&#243;j Dwuosobowy z Widokiem na Rzek&#281;</option>
@@ -1715,15 +1727,15 @@
                         <div class="res-info-item">
                             <div class="res-info-label" data-i18n="res_parking_label">Parking</div>
                             <div class="res-info-value" data-i18n="res_parking_value">Zamkni&#281;ty</div>
-                            <div class="res-info-note" data-i18n="res_parking_note">35 z&#322; / dob&#281;</div>
+                            <div class="res-info-note" ] z&#322; / dob&#281; &#8226; Liczba miejsc ograniczona</div>
                             <a href="https://www.google.com/maps/dir/?api=1&destination=50.66850353746782,17.918459302692465&travelmode=driving"
                                target="_blank" rel="noopener"
                                class="parking-nav-inline"
                                data-i18n="parking_nav_short">&#8594; Jak dojecha&#263; do parkingu?</a>
                         </div>
                         <div class="res-info-item">
-                            <div class="res-info-label" data-i18n="res_pets_label">Psy</div>
-                            <div class="res-info-value" data-i18n="res_pets_value">Tylko psy (maks. 2)</div>
+                            <div class="res-info-label" data-i18n="res_pets_label">Zwierz&#281;ta</div>
+                            <div class="res-info-value" data-i18n="res_pets_value">Tylko psy (maks. 2 / pok&#243;j)</div>
                             <div class="res-info-note" data-i18n="res_pets_note">Dodatkowa op&#322;ata 40 z&#322; / dob&#281;</div>
                         </div>
                     </div>
