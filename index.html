@@ -404,7 +404,8 @@
             background: var(--white);
             overflow: hidden;
             transition: transform 0.4s, box-shadow 0.4s;
-            display: block;
+            display: flex;
+            flex-direction: column;
             color: inherit;
             text-decoration: none;
             cursor: pointer;
@@ -432,7 +433,7 @@
             position: absolute;
             bottom: 16px; right: 16px;
             background: var(--brown-dark);
-            color: var(--gold);
+            color: var(--gold-light);
             font-family: var(--font-heading);
             font-size: 1.2rem;
             padding: 8px 16px;
@@ -443,11 +444,18 @@
             letter-spacing: 1px;
         }
 
-        .room-card-body { padding: 28px; }
+        .room-card-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
         .room-card-name {
             font-family: var(--font-heading);
             font-size: 1.4rem;
             font-weight: 600;
+            line-height: 1.3;
+            min-height: 2.6em;
             color: var(--brown-dark);
             margin-bottom: 8px;
         }
@@ -467,7 +475,9 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 20px;
+            margin-top: auto;
+            padding-top: 4px;
+            margin-bottom: 0;
         }
         .amenity-tag {
             font-size: 0.72rem;
